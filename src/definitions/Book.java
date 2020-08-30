@@ -18,3 +18,35 @@ public class Book {
         authorName = "O.Henry";
         thirteenDigitIsbnNumber = "1234567893216";
     }
+
+    public Book(String bookName, String authorName, String thirteenDigitIsbnNumber) {
+        this.bookName = bookName;
+        this.authorName = authorName;
+        this.thirteenDigitIsbnNumber = thirteenDigitIsbnNumber;
+    }
+
+    public String getBookName() {
+        return bookName;
+    }
+
+    public void setBookName(String bookName) {
+        this.bookName = bookName;
+    }
+
+    public String getAuthorName() {
+        return authorName;
+    }
+
+    public void setAuthorName(String authorName) {
+        this.authorName = authorName;
+    }
+
+    public String getThirteenDigitIsbnNumber() {
+        return thirteenDigitIsbnNumber;
+    }
+
+    public void setThirteenDigitIsbnNumber(String thirteenDigitIsbnNumber) {
+        this.thirteenDigitIsbnNumber = thirteenDigitIsbnNumber;
+    }
+
+
