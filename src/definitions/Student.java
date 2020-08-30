@@ -15,9 +15,9 @@ public class Student {
     private String lastNameOfStudent;
     private long universityRollNumberOfStudent;
     private int numberOfBooksIssuedByStudent;
-    private Book[] AllNamesOfBooksIssuedByStudent;
+    private Book[] namesOfBooksIssuedByStudent;
 
-    /**public String getFirstNameOfStudent() {
+    public String getFirstNameOfStudent() {
         return firstNameOfStudent;
     }
 
@@ -57,12 +57,12 @@ public class Student {
         this.numberOfBooksIssuedByStudent = numberOfBooksIssuedByStudent;
     }
 
-    public Book[] getAllNamesOfBooksIssuedByStudent() {
-        return AllNamesOfBooksIssuedByStudent;
+    public Book[] getNamesOfBooksIssuedByStudent() {
+        return namesOfBooksIssuedByStudent;
     }
 
-    public void setAllNamesOfBooksIssuedByStudent(Book[] allNamesOfBooksIssuedByStudent) {
-        AllNamesOfBooksIssuedByStudent = allNamesOfBooksIssuedByStudent;
+    public void setNamesOfBooksIssuedByStudent(Book[] namesOfBooksIssuedByStudent) {
+        namesOfBooksIssuedByStudent = namesOfBooksIssuedByStudent;
     }
 
     @Override
@@ -75,7 +75,7 @@ public class Student {
                 Objects.equals(firstNameOfStudent, student.firstNameOfStudent) &&
                 Objects.equals(middleNameOfStudent, student.middleNameOfStudent) &&
                 Objects.equals(lastNameOfStudent, student.lastNameOfStudent) &&
-                Arrays.equals(AllNamesOfBooksIssuedByStudent, student.AllNamesOfBooksIssuedByStudent);
+                Arrays.equals(namesOfBooksIssuedByStudent, student.namesOfBooksIssuedByStudent);
     }
 
     @Override
@@ -90,7 +90,7 @@ public class Student {
                 ", lastNameOfStudent='" + getLastNameOfStudent() + '\'' +
                 ", universityRollNumberOfStudent=" + getUniversityRollNumberOfStudent() +
                 ", numberOfBooksIssuedByStudent=" + getNumberOfBooksIssuedByStudent() +
-                ", AllNamesOfBooksIssuedByStudent=" + Arrays.toString(AllNamesOfBooksIssuedByStudent) +
+                ", AllNamesOfBooksIssuedByStudent=" + Arrays.toString(namesOfBooksIssuedByStudent) +
                 '}';
     }
 }
