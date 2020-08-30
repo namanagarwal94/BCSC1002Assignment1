@@ -9,50 +9,44 @@ package definitions;
 import java.util.Arrays;
 
 public class Library {
-    private Book[] allBooksThatAreCurrentlyAvailable;
+    private Book[] currentlyAvailableBooks;
 
     public Library() {
-        this.allBooksThatAreCurrentlyAvailable = new Book[20];
-        for (int index = 0; index < allBooksThatAreCurrentlyAvailable.length; index++) {
-            allBooksThatAreCurrentlyAvailable[index] = new Book("Book " + (index + 1));
+        this.currentlyAvailableBooks = new Book[20];
+        for (int index = 0; index < currentlyAvailableBooks.length; index++) {
+            currentlyAvailableBooks[index] = new Book("Book " + (index + 1));
         }
     }
 
-    public Library(Book[] allBooksThatAreCurrentlyAvailable) {
-        this.allBooksThatAreCurrentlyAvailable = allBooksThatAreCurrentlyAvailable;
+    public Library(Book[] currentlyAvailableBooks) {
+        this.currentlyAvailableBooks = currentlyAvailableBooks;
     }
 
-    public Book[] getStoreAllBooksThatAreCurrentlyAvailable() {
-        return allBooksThatAreCurrentlyAvailable;
+    public Book[] getCurrentlyAvailableBooks() {
+        return currentlyAvailableBooks;
     }
 
-    public void setStoreAllBooksThatAreCurrentlyAvailable(Book[] allBooksThatAreCurrentlyAvailable) {
-        this.allBooksThatAreCurrentlyAvailable = allBooksThatAreCurrentlyAvailable;
+    public void setCurrentlyAvailableBooks(Book[] currentlyAvailableBooks) {
+        this.currentlyAvailableBooks = currentlyAvailableBooks;
     }
 
-    @Override
+    /**@Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Library library = (Library) o;
-        return Arrays.equals(allBooksThatAreCurrentlyAvailable, library.allBooksThatAreCurrentlyAvailable);
+        return Arrays.equals(currentlyAvailableBooks, library.currentlyAvailableBooks);
     }
 
     @Override
     public int hashCode() {
-        return Arrays.hashCode(allBooksThatAreCurrentlyAvailable);
+        return Arrays.hashCode(currentlyAvailableBooks);
     }
 
     @Override
     public String toString() {
-        return Arrays.toString(allBooksThatAreCurrentlyAvailable);
+        return Arrays.toString(currentlyAvailableBooks);
     }
-
-    /**
-     * This method issued a Book to the Library.
-     *
-     * @param bookName The name of the Book to be issued.
-     */
 
     public void issuedBook(String bookName) {
         System.out.println(bookName + " book is issued for you.");
@@ -63,7 +57,7 @@ public class Library {
     }
 
     public void showAllIssuedBooks() {
-        for (Book book : allBooksThatAreCurrentlyAvailable) {
+        for (Book book : currentlyAvailableBooks) {
             System.out.println(book);
         }
     }

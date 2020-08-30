@@ -68,8 +68,7 @@ public class Book {
         return "Book{" +
                 "bookName='" + getBookName() + '\'' +
                 ", authorName='" + getAuthorName() + '\'' +
-                ", thirteenDigitIsbnNumber='" + getThirteenDigitIsbnNumber() + '\'' +
-                '}';
+                ", thirteenDigitIsbnNumber='" + getThirteenDigitIsbnNumber() + '\'' + '}';
     }
 }
 
