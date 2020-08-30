@@ -17,7 +17,7 @@ public class Student {
     private int numberOfBooksIssuedByStudent;
     private Book[] AllNamesOfBooksIssuedByStudent;
 
-    public String getFirstNameOfStudent() {
+    /**public String getFirstNameOfStudent() {
         return firstNameOfStudent;
     }
 
